@@ -50,6 +50,10 @@ Install the OpenFaaS CLI:
 ```
 curl -sSL https://cli.openfaas.com | sudo sh
 ```
+Create a directory for your functions, e.g.
+```
+mkdir ~/functions && cd ~/functions
+```
 Fetch the function template:
 ```
 faas-cli template store pull python3-flask
