@@ -37,7 +37,10 @@ Add the following to the "Docker Engine" section of the Docker desktop preferenc
 ```
 Then export the required environment variables:
 ```
-export VM_IP=<vm-ip>  # Get the microk8s VM IP
+export VM_IP=<vm-ip>  # Set the microk8s VM IP
+```
+Set the OpenFaaS variables:
+```
 export OPENFAAS_PORT=`mk get svc gateway-external -n openfaas -o jsonpath='{.spec.ports[].nodePort}'`  # Get the OpenFaaS port
 export OPENFAAS_URL=$VM_IP:$OPENFAAS_PORT  # Set the OpenFaaS URL
 export OPENFAAS_PREFIX=localhost:32000  # Set the OpenFaaS function image location
