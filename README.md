@@ -2,8 +2,8 @@
 
 ## Prerequisites
 
-Install Docker: https://docs.docker.com/get-docker/
-Install MicroK8s: https://microk8s.io/#install-microk8s
+* Install Docker: https://docs.docker.com/get-docker/
+* Install MicroK8s: https://microk8s.io/#install-microk8s
 
 ## Deploy your first OpenFaaS function on Kubernetes!
 
