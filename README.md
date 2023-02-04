@@ -15,7 +15,6 @@ microk8s install
 microk8s status --wait-ready
 microk8s enable community registry
 microk8s enable openfaas --no-auth
-alias mk='microk8s kubectl'
 ```
 
 ### Set the environment variables
@@ -41,6 +40,7 @@ export VM_IP=<vm-ip>  # Set the microk8s VM IP
 ```
 Set the OpenFaaS variables:
 ```
+alias mk='microk8s kubectl'
 export OPENFAAS_PORT=`mk get svc gateway-external -n openfaas -o jsonpath='{.spec.ports[].nodePort}'`  # Get the OpenFaaS port
 export OPENFAAS_URL=$VM_IP:$OPENFAAS_PORT  # Set the OpenFaaS URL
 export OPENFAAS_PREFIX=localhost:32000  # Set the OpenFaaS function image location
