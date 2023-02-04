@@ -22,7 +22,11 @@ alias mk='microk8s kubectl'
 
 Get the microk8s VM ip:
 ```
-multipass info microk8s-vm
+$ multipass info microk8s-vm
+Name:           microk8s-vm
+State:          Running
+IPv4:           192.168.64.2 <- This is the VM ip
+...
 ```
 Add the following to the "Docker Engine" section of the Docker desktop preferences:
 ```
